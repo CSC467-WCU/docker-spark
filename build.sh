@@ -5,9 +5,6 @@ set -e
 docker image rm spark-worker | true
 docker image rm spark-master | true
 
-dos2unix docker/spark-worker/start-worker.sh
-dos2unix docker/spark-master/start-master.sh
-
 docker build -t spark-master:latest ./docker/spark-master
 docker build -t spark-worker:latest ./docker/spark-worker
 
