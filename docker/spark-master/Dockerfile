@@ -10,7 +10,6 @@ ENV SPARK_MASTER_LOG=/spark/logs
 
 RUN pip3 install jupyter
 RUN pip3 install flask
-RUN mkdir /spark-apps
 
 EXPOSE 8080 7077 6066 8888 4040 9009 5001
 
