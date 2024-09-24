@@ -9,7 +9,7 @@ services:
       - "4040:4040"
       - "5001:5001"
     volumes:
-       - ./apps:/opt/spark-apps
+       - ./apps:/spark-apps
        - ./data:/opt/spark-data
     environment:
       - "SPARK_LOCAL_IP=spark-master"
