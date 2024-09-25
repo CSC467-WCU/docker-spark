@@ -1,4 +1,3 @@
-version: "3.0"
 services:
   spark-master:
     image: spark-master:latest
@@ -10,7 +9,6 @@ services:
       - "5001:5001"
     volumes:
        - ./apps:/spark-apps
-       - ./data:/opt/spark-data
     environment:
       - "SPARK_LOCAL_IP=spark-master"
   spark-worker:
@@ -26,8 +24,7 @@ services:
       - SPARK_DRIVER_MEMORY=128m
       - SPARK_EXECUTOR_MEMORY=256m
     volumes:
-       - ./apps:/opt/spark-apps
-       - ./data:/opt/spark-data
+       - ./apps:/spark-apps
 networks:
   default:
     driver: bridge
