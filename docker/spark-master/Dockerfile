@@ -8,8 +8,9 @@ ENV SPARK_MASTER_PORT=7077
 ENV SPARK_MASTER_WEBUI_PORT=8080
 ENV SPARK_MASTER_LOG=/spark/logs
 
-RUN pip3 install jupyter
-RUN pip3 install flask
+RUN pip3 install jupyter && \
+    pip3 install flask && \
+    pip3 install numpy pandas nltk
 
 EXPOSE 8080 7077 6066 8888 4040 9009 5001
 
