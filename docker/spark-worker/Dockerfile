@@ -9,7 +9,7 @@ ENV SPARK_WORKER_LOG=/spark/logs
 ENV SPARK_MASTER="spark://spark-master:7077"
 
 RUN pip3 install flask && \
-    pip3 install numpy pandas nltk matplotlib sklearn
+    pip3 install numpy pandas nltk matplotlib scikit-learn
     
 EXPOSE 8081
 
