@@ -2,7 +2,8 @@
 
 set -e
 
-docker system prune -a --volumes
+docker image rm spark-master:latest || true
+docker iamge rm spark-worker:latest || true
 
 docker build -t spark-master:latest ./docker/spark-master
 docker build -t spark-worker:latest ./docker/spark-worker
